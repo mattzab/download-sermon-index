@@ -1,5 +1,6 @@
 #!/bin/bash
 echo Starting Script...
+echo  
 echo Cleaning up XML files to be used with Wget...
 
 echo replace </title> with .mp3
