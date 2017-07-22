@@ -1,9 +1,11 @@
 #!/bin/bash
+echo Starting Script...
+echo Cleaning up XML files to be used with Wget...
 
-#replace </title> with .mp3
+echo replace </title> with .mp3
 sed -i -- 's,</Title>,.mp3,g' *.xml
 
-#remove ! from titles
+echo remove ! from titles
 sed -i -- 's,!,,g' *.xml
 
 #remove all ( from titles
@@ -12,42 +14,42 @@ sed -i -- 's,!,,g' *.xml
 #remove all ) from titles
 #sed -i 's,),,g' *.xml
 
-#remove ' from titles
+echo remove ' from titles
 sed -i "s,',,g" *.xml
 
-#remove &amp; from titles
+echo remove &amp; from titles
 sed -i 's,&amp;,And,g' *.xml
 
-#replace : with . in verses
+echo replace : with . in verses
 sed -i -- 's,:,.,g' *.xml
 
-#restore the : in http://
+echo restore the : in http://
 sed -i -- 's,p./,p:/,g' *.xml
 
-#remove spaces from titles
+echo remove spaces from titles
 sed -i -- 's, ,,g' *.xml
 
-#remove leading title tag
+echo remove leading title tag
 sed -i -- 's,<Title>,,g' *.xml
 
-#remove leading url tag
+echo remove leading url tag
 sed -i -- 's,<Url>,,g' *.xml
 
-#remove all remaining < and > tags and everything in-between
+echo remove all remaining < and > tags and everything in-between
 sed -i 's,<.*>,,g' *.xml
 
-#cleanup white space
+echo cleanup white space
 sed -i '/^$/d' *.xml
 
-#make a directory for all files
+echo make a directory for all files
 find . -name "*.xml" -exec sh -c 'mkdir "${1%.*}" ; mv "$1" "${1%.*}" ' _ {} \;
 
 
 
-#wget everything oneliner?
+echo wget everything oneliner
 for d in ./*/ ; do (cd "$d" && while read filename; do read url; wget -O $filename $url; done < *.xml); done
 
-#delete xml files
+echo delete xml files
 for d in ./*/ ; do (cd "$d" && rm *.xml); done
 
 #tell the user the process is finally over
