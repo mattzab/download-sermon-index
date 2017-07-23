@@ -5,7 +5,7 @@ A Bash Script To Download All Sermons On SermonIndex.net
 Download the Bash Script, make it executable, and run it in terminal.
 
 ## Mac Users:
-Be sure to use the OSX version of the script. Make it executable, and run it with terminal.
+Be sure to use the OSX version of the script. Make it executable, and run it with terminal. It will ask for your password since it has to install homebrew, gnu-sed, and wget to run the script.
 
 ## Windows Users:
 Use Cygwin and install wget, then navigate through the terminal to the script, and run from there.
