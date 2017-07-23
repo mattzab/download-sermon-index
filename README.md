@@ -2,10 +2,10 @@
 A Bash Script To Download All Sermons On SermonIndex.net
 
 ## Linux Users:
-Download the Bash Script, Download speakers.zip, and execute the bash script from within the directory containing the XML files. (Make Download_all.sh executable, and put it in the folder with the XML files, then use terminal to run the script)
+Download the Bash Script, make it executable, and run it.
 
 ## Mac Users:
-I wrote this script on Linux, but I suspect it should work exactly the same for you. Untested.
+I wrote this script on Linux, but I suspect it should work exactly the same for you. Currently untested.
 
 ## Windows Users:
 Use Cygwin and install wget, then navigate through the terminal to the directory with the XML files, and run the script from there.
