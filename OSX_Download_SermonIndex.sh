@@ -5,7 +5,7 @@ echo install gnu-sed
 brew install gnu-sed
 echo install wget
 brew install wget
-brew link --
+brew link --overwrite wget
 echo Make Sermon Index Directory
 mkdir 'Sermon Index'
 cd 'Sermon Index'
