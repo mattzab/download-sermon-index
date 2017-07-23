@@ -2,13 +2,13 @@
 A Bash Script To Download All Sermons On SermonIndex.net
 
 ## Linux Users:
-Download the Bash Script, make it executable, and run it.
+Download the Bash Script, make it executable, and run it in terminal.
 
 ## Mac Users:
-I wrote this script on Linux, but I suspect it should work exactly the same for you. Currently untested.
+Be sure to use the OSX version of the script. Make it executable, and run it with terminal.
 
 ## Windows Users:
-Use Cygwin and install wget, then navigate through the terminal to the directory with the XML files, and run the script from there.
+Use Cygwin and install wget, then navigate through the terminal to the script, and run from there.
 Cygwin How-To: http://lifehacker.com/179514/geek-to-live--introduction-to-cygwin-part-i
 
 # Usage Ideas:
@@ -18,6 +18,5 @@ If your connection is fast enough, you can split the XML files into multiple dir
 ### Use The Cloud
 Use an Amazon AWS EC2 instance and use remote-desktop to log in and use the script to download everything with a faster connection than you can find anywhere else. (~40 GiB kind of speeds) I did this, and downloaded the files to my Google Drive directory so they could be uploading while being downloaded, simultaneously. I also broke this up into three instances of the script running at the same time, and I still wasn't able to max out the connection. I was able to download _and_ re-upload the entire archive to Google Drive in under a day. Then I can let Google Drive just sync the folder to my home PC over time, as my home connection is very slow.
 
-## Known Issues:
-#### XML Source
-The XML files are currently coming from this GitHub project, but it would be much better to retreive the XML archive from SermonIndex to make sure it's always current and up-to-date. I plan to implement this in the future.
+## Support:
+#### Contact: mattzab+support@gmail.com
