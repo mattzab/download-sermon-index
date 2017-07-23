@@ -1,5 +1,11 @@
 #!/bin/bash
-echo Starting Script...
+
+echo Download updated Speaker Listing
+wget http://img.sermonindex.net/Cache_Update.zip
+echo Extract Speaker Listing File
+unzip *.zip
+echo Delete Speaker Listing Zip
+rm *.zip
 echo  
 echo Cleaning up XML files to be used with Wget...
 echo  
