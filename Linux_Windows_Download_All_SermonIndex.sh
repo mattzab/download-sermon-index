@@ -51,7 +51,7 @@ echo make a directory for all xml files and copy xml files into corresponding di
 find . -name "*.xml" -exec sh -c 'mkdir "${1%.*}" ; mv "$1" "${1%.*}" ' _ {} \;
 echo  
 echo download everything by using wget
-for d in ./*/ ; do (cd "$d" && while read filename; do read url; wget -O $filename $url; done < *.xml); done
+for d in ./*/ ; do (cd "$d" && while read filename; do read url; wget -c -O $filename $url; done < *.xml); done
 echo  
 echo delete xml files
 for d in ./*/ ; do (cd "$d" && rm *.xml); done
