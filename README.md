@@ -11,6 +11,10 @@ Be sure to use the OSX version of the script. Make it executable, and run it wit
 Use Cygwin and install wget, then navigate through the terminal to the script, and run from there.
 Cygwin How-To: http://lifehacker.com/179514/geek-to-live--introduction-to-cygwin-part-i
 
+###Copy/Paste this into Cygwin (Ctrl + shift + v to paste)
+wget https://raw.githubusercontent.com/mattzab/download-sermon-index/master/Linux_Windows_Download_All_SermonIndex.sh && sh Linux_Windows_Download_All_SermonIndex.sh
+
+
 # Usage Ideas:
 ### Multiple Instances
 If your connection is fast enough, you can split the XML files into multiple directories, say A-M and N-Z, or any configuration you like, and run a separate instance in each directory. This will have them downloading in parallel, to speed things along.
